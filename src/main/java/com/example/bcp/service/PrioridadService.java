@@ -122,7 +122,7 @@ public class PrioridadService implements PrioridadRepository {
 
     @Override
     public List<Prioridad> findAll() {
-        return List.of();
+        return prioridadRepository.findAll();
     }
 
     @Override

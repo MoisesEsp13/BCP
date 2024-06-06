@@ -1,20 +1,25 @@
 package com.example.bcp.model;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Prioridad")
+@Table(name = "\"Prioridad\"")
 public class Prioridad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Prioridad_Id")
+    @Column(name = "\"Prioridad_Id\"")
     private Integer prioridadId;
 
-    @Column(name = "Prioridad_Tipo", length = 5)
+    @Column(name = "\"Prioridad_Tipo\"", length = 5)
     private String prioridadTipo;
 
-    @Column(name = "Prioridad_Detalle", length = 250)
+    @Column(name = "\"Prioridad_Detalle\"", length = 250)
     private String prioridadDetalle;
+
+    public Prioridad() {
+        // Constructor por defecto
+    }
 
     // Getters and Setters
 

@@ -1,9 +1,7 @@
 package com.example.bcp.service;
 
 import com.example.bcp.model.Area;
-import com.example.bcp.model.Estado;
 import com.example.bcp.repository.AreaRepository;
-import com.example.bcp.repository.EstadoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
@@ -164,7 +162,7 @@ public class AreaService implements AreaRepository {
 
     @Override
     public List<Area> findAll(Sort sort) {
-        return List.of();
+        return areaRepository.findAll(sort);
     }
 
     @Override

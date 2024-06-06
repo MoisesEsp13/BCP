@@ -123,7 +123,8 @@ public class EstadoService implements EstadoRepository {
 
     @Override
     public List<Estado> findAll() {
-        return List.of();
+
+        return estadoRepository.findAll();
     }
 
     @Override

@@ -1,20 +1,29 @@
 package com.example.bcp.model;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Estado")
+@Table(name = "\"Estado\"")
 public class Estado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Estado_Id")
+    @Column(name = "\"Estado_Id\"")
     private Integer estadoId;
 
-    @Column(name = "Estado_Tipo", length = 10)
+    @Column(name = "\"Estado_Tipo\"", length = 10)
     private String estadoTipo;
 
-    // Getters and Setters
+    public Estado() {
+        // Constructor por defecto
+    }
 
+    public Estado(Integer estadoId, String estadoTipo) {
+        this.estadoId = estadoId;
+        this.estadoTipo = estadoTipo;
+    }
+
+    // Getters and Setters
     public Integer getEstadoId() {
         return estadoId;
     }
@@ -28,11 +37,6 @@ public class Estado {
     }
 
     public void setEstadoTipo(String estadoTipo) {
-        this.estadoTipo = estadoTipo;
-    }
-
-    public Estado(Integer estadoId, String estadoTipo) {
-        this.estadoId = estadoId;
         this.estadoTipo = estadoTipo;
     }
 }

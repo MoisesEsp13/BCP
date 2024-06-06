@@ -102,7 +102,8 @@ public class MigracionService implements MigracionRepository {
 
     @Override
     public <S extends Migracion> S save(S entity) {
-        return null;
+
+        return migracionRepository.save(entity);
     }
 
     @Override
@@ -122,7 +123,8 @@ public class MigracionService implements MigracionRepository {
 
     @Override
     public List<Migracion> findAll() {
-        return List.of();
+
+        return migracionRepository.findAll();
     }
 
     @Override

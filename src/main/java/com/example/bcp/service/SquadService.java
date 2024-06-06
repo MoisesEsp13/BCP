@@ -122,7 +122,7 @@ public class SquadService implements SquadRepository {
 
     @Override
     public List<Squad> findAll() {
-        return List.of();
+        return squadRepository.findAll();
     }
 
     @Override

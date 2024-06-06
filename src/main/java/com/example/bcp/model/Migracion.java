@@ -1,40 +1,40 @@
 package com.example.bcp.model;
+
 import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "Migracion")
+@Table(name = "\"Migracion\"")
 public class Migracion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Migracion_Id")
+    @Column(name = "\"Migracion_Id\"")
     private Integer migracionId;
 
     @ManyToOne
-    @JoinColumn(name = "Pedido_Id", nullable = false)
+    @JoinColumn(name = "\"Pedido_Id\"", nullable = false)
     private Pedido pedidoId;
 
     @ManyToOne
-    @JoinColumn(name = "Id_Squad", nullable = false)
+    @JoinColumn(name = "\"Id_Squad\"", nullable = false)
     private Squad idSquad;
 
     @ManyToOne
-    @JoinColumn(name = "Id_tecnologia", nullable = false)
+    @JoinColumn(name = "\"Id_tecnologia\"", nullable = false)
     private Tecnologia idTecnologia;
 
-    @Column(name = "Entorno", length = 50)
+    @Column(name = "\"Entorno\"", length = 50)
     private String entorno;
 
-    @Column(name = "Fecha_migracion")
+    @Column(name = "\"Fecha_migracion\"")
     @Temporal(TemporalType.DATE)
     private Date fechaMigracion;
 
-    @Column(name = "Valido")
+    @Column(name = "\"Valido\"")
     private Boolean valido;
 
     // Getters and Setters
-
 
     public Integer getMigracionId() {
         return migracionId;
@@ -93,7 +93,7 @@ public class Migracion {
     }
 
     public Migracion() {
-
+        // Constructor por defecto
     }
 
     public Migracion(Pedido pedidoId, Squad idSquad, Tecnologia idTecnologia, String entorno, Date fechaMigracion, Boolean valido) {

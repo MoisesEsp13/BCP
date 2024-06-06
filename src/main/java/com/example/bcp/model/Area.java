@@ -2,21 +2,21 @@ package com.example.bcp.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Area")
+@Table(name =  "\"Area\"")
 public class Area {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Area_Id")
+    @Column(name = "\"Area_Id\"")
     private Integer areaId;
 
-    @Column(name = "Area_Nombre", length = 100)
+    @Column(name = "\"Area_Nombre\"", length = 100)
     private String areaNombre;
 
-    @Column(name = "Area_Descripcion", length = 100)
+    @Column(name = "\"Area_Descripcion\"", length = 100)
     private String areaDescripcion;
 
-    @Column(name = "Area_Direccion", length = 50)
+    @Column(name = "\"Area_Direccion\"", length = 50)
     private String areaDireccion;
 
     // Getters and Setters

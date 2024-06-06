@@ -122,7 +122,7 @@ public class TecnologiaService implements TecnologiaRepository {
 
     @Override
     public List<Tecnologia> findAll() {
-        return List.of();
+        return tecnologiaRepository.findAll();
     }
 
     @Override

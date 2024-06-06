@@ -102,7 +102,8 @@ public class PedidoService implements PedidoRepository {
 
     @Override
     public <S extends Pedido> S save(S entity) {
-        return null;
+
+        return pedidoRepository.save(entity);
     }
 
     @Override
@@ -122,7 +123,7 @@ public class PedidoService implements PedidoRepository {
 
     @Override
     public List<Pedido> findAll() {
-        return List.of();
+        return pedidoRepository.findAll();
     }
 
     @Override
@@ -137,12 +138,13 @@ public class PedidoService implements PedidoRepository {
 
     @Override
     public void deleteById(Long aLong) {
+        pedidoRepository.deleteById(aLong);
 
     }
 
     @Override
     public void delete(Pedido entity) {
-
+        pedidoRepository.delete(entity);
     }
 
     @Override

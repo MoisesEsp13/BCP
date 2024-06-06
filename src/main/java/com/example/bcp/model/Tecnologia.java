@@ -1,20 +1,20 @@
 package com.example.bcp.model;
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Tecnologia")
+@Table(name = "\"Tecnologia\"")
 public class Tecnologia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_tecnologia")
+    @Column(name = "\"id_tecnologia\"")
     private Integer idTecnologia;
 
-    @Column(name = "nombre_tecnologia", length = 50)
+    @Column(name = "\"nombre_tecnologia\"", length = 50)
     private String nombreTecnologia;
 
     // Getters and Setters
-
     public Integer getIdTecnologia() {
         return idTecnologia;
     }
@@ -28,10 +28,6 @@ public class Tecnologia {
     }
 
     public void setNombreTecnologia(String nombreTecnologia) {
-        this.nombreTecnologia = nombreTecnologia;
-    }
-
-    public Tecnologia(String nombreTecnologia) {
         this.nombreTecnologia = nombreTecnologia;
     }
 }

@@ -18,7 +18,7 @@ public class AreaRest {
     private AreaService areaService;
 
     @GetMapping
-    private ResponseEntity<List<Area>> getAllPaises(){
+    private ResponseEntity<List<Area>> getAllAreas(){
         return ResponseEntity.ok(areaService.findAll());
     };
 }
