@@ -171,4 +171,9 @@ public class PedidoService implements PedidoRepository {
     public Page<Pedido> findAll(Pageable pageable) {
         return null;
     }
+
+    @Override
+    public List<Object[]> getTop3Pedidos() {
+        return pedidoRepository.getTop3Pedidos();
+    }
 }
